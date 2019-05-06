@@ -11,4 +11,9 @@
 **2017年9月发布了spring的最新版本spring5.0通用版(GA)**
 ## Spring体系架构
  ![](spring-overview.png)
-  
+ 
+ **Core Container**：核心容器 
+ **Dara Aceess**：数据访问   持久层
+ **Web**：
+ **Test**：
+ 
