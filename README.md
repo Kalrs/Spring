@@ -16,19 +16,19 @@
  - 管理bean
  - 核心
  - 上下文(体现在配置文件)
- - SpEL表达式
+ - SpEL表达式  
  **A A**
  - 切面编程
- - AOP框架
+ - AOP框架  
  **Data Access**
  - JDBC Template数据库开发
  - 整合hibernate
- - 事务管理
+ - 事务管理  
  **Web**
  - web开发
- - 整合Struts
+ - 整合Struts  
  **Test**
- - 整合Junit
+ - 整合Junit  
  ## Spring优点
  - 方便解耦，简化开发(高内聚低耦合)
  >Spring就是一个大工厂(用于生产bean)，将所有对象创建和依赖关系，交给Spring管理
