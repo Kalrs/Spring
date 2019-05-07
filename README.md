@@ -12,10 +12,10 @@
 ## Spring体系架构
  ![images](spring-overview.png)
  
- **Core Container**：核心容器
- **Dara Aceess**：数据访问   持久层
- **Web**
- **Test**
+ **Core Container**：核心容器  
+ **Dara Aceess**：数据访问   持久层  
+ **Web**  
+ **Test**  
  
  
  
@@ -24,7 +24,7 @@
  - 类之间的依赖
  - 方法之间的依赖
  #### 解耦:降低程序间的依赖关系
- - 解耦思路
+**解耦思路**
    1. 使用反射来创建对象，而避免使用new关键字
    2. 通过读取配置文件来获取要创建的对象权限定类名
  
