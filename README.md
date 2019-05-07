@@ -21,13 +21,16 @@
  **AOP A** 切面编程
  - 切面编程
  - AOP框架  
+ 
  **Data Access**  数据库操作
  - JDBC Template数据库开发
  - 整合hibernate
  - 事务管理  
- **Web** 
+ 
+ **Web** 表现层
  - web开发
  - 整合Struts  
+ 
  **Test**  测试
  - 整合Junit  
  ## Spring优点
