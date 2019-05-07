@@ -46,3 +46,5 @@
  >Spring不排斥各种优秀的开源框架，其内部提供了对各种优秀框架(如:Struts、Hibermate、MyBatis、Quartz等)的直接支持
  - 降低JavaEE API的使用难度
  >Spring对JavaEE开发中非常难用的一些API（JDBC，JavaMail、远程调用等），都提供了封装，使这些API应用难度大大降低
+# IoC
+[跳转](/IoC/demo.md)
