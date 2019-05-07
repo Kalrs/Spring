@@ -12,9 +12,26 @@
 ## Spring体系架构
  ![images](spring-overview.png)
  
+ **Core Container** 核心容器 
+ - 管理bean
+ - 核心
+ - 上下文(体现在配置文件)
+ - SpEL表达式
+ **A A**
+ - 切面编程
+ - AOP框架
+ **Data Access**
+ - JDBC Template数据库开发
+ - 整合hibernate
+ - 事务管理
+ **Web**
+ - web开发
+ - 整合Struts
+ **Test**
+ - 整合Junit
  ## Spring优点
- - 方便[解耦](README.md#程序的耦合)，简化开发(高内聚低耦合)
- >Spring就是一个大厂，将所有对象创建和依赖关系，交给Spring管理
+ - 方便解耦，简化开发(高内聚低耦合)
+ >Spring就是一个大工厂(用于生产bean)，将所有对象创建和依赖关系，交给Spring管理
  - AOP编程的支持
  >Spring提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能
  - 声明式事务的支持
@@ -25,15 +42,3 @@
  >Spring不排斥各种优秀的开源框架，其内部提供了对各种优秀框架(如:Struts、Hibermate、MyBatis、Quartz等)的直接支持
  - 降低JavaEE API的使用难度
  >Spring对JavaEE开发中非常难用的一些API（JDBC，JavaMail、远程调用等），都提供了封装，使这些API应用难度大大降低
- 
- 
- 
- ### 程序的耦合
- #### 耦合:程序间的依赖关系
- - 类之间的依赖
- - 方法之间的依赖
- #### 解耦:降低程序间的依赖关系
-**解耦思路**
-   1. 使用反射来创建对象，而避免使用new关键字
-   2. 通过读取配置文件来获取要创建的对象权限定类名
- 
