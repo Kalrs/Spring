@@ -13,7 +13,7 @@
  ![images](spring-overview.png)
  
  ## Spring优点
- - 方便解耦(README.md#程序的耦合-demo)，简化开发(高内聚低耦合)
+ - 方便[解耦](README.md#程序的耦合-demo)，简化开发(高内聚低耦合)
  >Spring就是一个大厂，将所有对象创建和依赖关系，交给Spring管理
  - AOP编程的支持
  >Spring提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能
