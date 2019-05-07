@@ -17,17 +17,18 @@
  - 核心
  - 上下文(体现在配置文件)
  - SpEL表达式  
- **A A**
+ 
+ **AOP A** 切面编程
  - 切面编程
  - AOP框架  
- **Data Access**
+ **Data Access**  数据库操作
  - JDBC Template数据库开发
  - 整合hibernate
  - 事务管理  
- **Web**
+ **Web** 
  - web开发
  - 整合Struts  
- **Test**
+ **Test**  测试
  - 整合Junit  
  ## Spring优点
  - 方便解耦，简化开发(高内聚低耦合)
