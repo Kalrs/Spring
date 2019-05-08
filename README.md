@@ -47,5 +47,5 @@
  - 降低JavaEE API的使用难度
  >Spring对JavaEE开发中非常难用的一些API（JDBC，JavaMail、远程调用等），都提供了封装，使这些API应用难度大大降低
 # IoC
-[IoC实例](/IoC/Ioc.md)
+[IoC实例](/IoC/Ioc.md)  
 [DI实例](/IoC/DI.md)
