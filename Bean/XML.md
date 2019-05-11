@@ -83,5 +83,15 @@ public class MyBeanFactory {
 BeanFactory：工厂，用于生成任意bean  
 FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFactoryBean，用于生产代理```<bean id="" class="...ProxyFactoryBean">获得代理对象实例。AOP使用
 
+## 作用域
+- 用于确定spring创建bean实例个数
+- 取值
+  - singleton 单例，默认值
+  - prototype 多例，每执行一次，将获得一个实例。
+- 配置信息
+```<bean id="" class="" scope="">```
+
+![image](/scope.png)
+
 
 
