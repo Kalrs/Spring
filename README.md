@@ -49,3 +49,18 @@
 # IoC
 [IoC实例](/IoC/Ioc.md)  
 [DI实例](/IoC/DI.md)
+# 核心API
+1. BeanFactory：这是一个工厂，用于生成任意bean
+>采取延迟加载，第一次getBean才会初始化Bean
+
+2. ApplicationContext：是BeanFactory的子接口，功能更强大
+>可以实现国际化处理，事件传递，Bean自动装配，各种不同应用层的Context实现；当配置文件被加载，就进行对象实例化
+
+3. ClassPathXmlApplicationContext：用于加载classpath(类路径、src)下的指定xml
+>加载xml运行时的位置-->/WEB-INF/classes/...xml
+
+4. FileSystemXmlApplicationContext：用于加载指定盘符下的xml
+>加载xml运行时的位置-->/WEB-INF/...xml 通过javaweb ServletContextgetRealPath()获得具体盘符
+
+# 装配Bean
+
