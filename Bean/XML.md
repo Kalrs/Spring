@@ -93,5 +93,6 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
 
 ![image](/scope.png)
 
+## 生命周期
 
 
