@@ -94,5 +94,48 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
 ![image](/scope.png)
 
 ## 生命周期
-
+### 初始化和销毁
+  ##### 目标方法执行前后，将进行初始化或销毁
+    >```<bean id="" class="" init-method="初始化方法名称" destroy-method="销毁的方法名称"```
+ - 目标类 
+   ```java
+    public class UserServiceImpl implements UserService {
+    @Override
+    public void addUser() {
+        System.out.println("life add user");
+    }
+    public void myInit(){
+        System.out.println("初始化");
+    }
+    public void myDestory(){
+        System.out.println("销毁");
+    }
+     ```
+ - 配置信息
+   ```java
+         <!--
+        init-method  用于配置初始化方法，准备数据等
+        destroy-method 用于配置销毁方法，清理资源等
+        -->
+        <bean id="userServiceId" class="Lee.Bean.XML.lifestyle.UserServiceImpl"
+        init-method="myInit" destroy-method="myDestory"
+        >
+        </bean>
+   ```
+### BeanPostProcessor （后处理Bean）
+- spring提供一种机制，只要实现此接口，并将实现类提供给spring容器，spring容器将自动执行，在初始化前执行before()，初始化方法后执行after()，配置```<bean class="">```
+![image](/beanPostPro.png)
+- spring 提供工厂勾子，用于修改实例对象，可以生成代理对象，是AOP底层
+>
+```java
+//模拟
+ A a=new A();
+ a=(A)B.before(a);  //将a的实例对象传递给后处理bean 可以生成代理对象并返回
+ a.init();
+ a=(A)B.after(a);
+ 
+ a.addUser();   //生成代理对象，目的在目标方法前后执行(例如：开启事务、提交事务)
+ 
+ a.destroy();
+```
 
