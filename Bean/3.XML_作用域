@@ -1,0 +1,7 @@
+### 作用域
+- 用于确定spring创建bean实例个数
+- 取值
+  - singleton 单例，默认值
+  - prototype 多例，每执行一次，将获得一个实例。
+- 配置信息
+```<bean id="" class="" scope="">
