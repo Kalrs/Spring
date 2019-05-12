@@ -96,7 +96,7 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
 ## 生命周期
 ### 初始化和销毁
   ##### 目标方法执行前后，将进行初始化或销毁
-    >```<bean id="" class="" init-method="初始化方法名称" destroy-method="销毁的方法名称"```
+    <bean id="" class="" init-method="初始化方法名称" destroy-method="销毁的方法名称"
  - 目标类 
    ```java
     public class UserServiceImpl implements UserService {
