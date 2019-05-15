@@ -181,7 +181,8 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
  ### p命名空间[了解]
  - 对"setter方法注入"进行简化，替换<property name="属性名">,而是在<bean p:属性名="普通值" p:属性名-ref="引用值">
  - p命名空间使用前提，必须添加命名空间
- - 配置信息
+ - 配置信息  
+ 
 ![images](pnamespase.png)
  >
  ```java
@@ -202,3 +203,79 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
      >
     </bean>
  ```
+
+### SpEL[了解]
+- 对<property>进行统一编程，所有的内容都使用value <property name="" value="#{表达式}">
+>#{123} #{'jack'}: 数字 字符串
+ #{beanId} :另一个bean引用
+ #{beanId.propName} :操作数据
+ #{beanId.toString()} :执行方法
+ #{T(类).字段、方法}  :静态方法或字段
+ 
+- 配置信息
+>
+```java
+  <!--
+        <property name="uname" value="#{'jack'}"></property>
+        <property name="uname" value="#{UserId.uname.toUpperCase()}"></property>
+        通过另一个bean，获得属性，调用方法
+        <property name="uname" value="#{UserId.uname?.toUpperCase()}"></property>
+          ?  如果对象不为null，则调用方法
+     -->
+        <bean id="UserId" class="Lee.Bean.XML.SpEl.User">
+        <property name="uname" value="#{UserId.uname?.toUpperCase()}"></property>
+        <property name="pi" value="#{T(java.lang.Math).PI}"></property>
+        </bean>
+```
+### 集合注入
+- 配置信息
+>
+```java
+       <!--
+         集合的注入都是给<property>添加子标签
+         数组:<array>
+         List:<list>
+         Set:<set>
+         Map:<map>  map存放键值对，使用<entry>描述 
+         Properties:<props> <prop key="">值</prop>
+
+         普通数据：value
+         引用数据：ref
+        -->
+        <bean id="CollDataId" class="Lee.Bean.XML.coll.CollData">
+                <property name="arrayData">
+                        <array>
+                                <value>DS</value>
+                                <value>DZD</value>
+                                <value>大叔</value>
+                                <value>定制的</value>
+                        </array>
+                </property>
+                <property name="listData">
+                        <list>
+                                <value>李大叔</value>
+                                <value>LDS</value>
+                        </list>
+                </property>
+                <property name="setData">
+                        <set>
+                                <value>哦豁</value>
+                                <value>根本</value>
+                                <value>学不会</value>
+                        </set>
+                </property>
+                <property name="mapData">
+                        <map>
+                                <entry key="大哥" value="李大叔"></entry>
+                                <entry key="大嫂" value="萌萌"></entry>
+
+                        </map>
+                </property>
+               <property name="propsData">
+                       <props>
+                        <prop key="蓝天">白云</prop>
+                        <prop key="林深">见鹿</prop>
+                       </props>
+               </property>
+        </bean>
+```
