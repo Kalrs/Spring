@@ -141,7 +141,7 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
 
 ## 属性注入
 ### setter方法
-- 配置方法
+- 配置信息
 > 
 ```java
  <!--setter方法注入
@@ -181,3 +181,24 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
  ### p命名空间[了解]
  - 对"setter方法注入"进行简化，替换<property name="属性名">,而是在<bean p:属性名="普通值" p:属性名-ref="引用值">
  - p命名空间使用前提，必须添加命名空间
+ - 配置信息
+![images](XML/pnamespace.png)
+ >
+ ```java
+ 
+     <bean id="personId" class="Lee.Bean.XML.p.Person"
+          p:age="123"
+          p:name="李大叔"
+          p:homeaddr-ref="Address"
+          p:comaddr-ref="comAddress"
+    >
+    </bean>
+    <bean id="Address" class="Lee.Bean.XML.p.Address"
+        p:addr="DG" p:tel="112"
+    >
+    </bean>
+    <bean id="comAddress" class="Lee.Bean.XML.p.Address"
+        p:addr="DG" p:tel="123"
+    >
+    </bean>
+ ```
