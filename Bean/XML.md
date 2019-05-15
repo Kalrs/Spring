@@ -139,3 +139,45 @@ FactoryBean：特殊bean，用于生成另一个特定bean，例如：proxyFacto
  a.destroy();
 ```
 
+## 属性注入
+### setter方法
+- 配置方法
+> 
+```java
+ <!--setter方法注入
+        * 普通数据
+            <property name="" value="值"></property>
+            等效
+            <property name="">
+            <value>123<value>
+            </property>
+        * 引用数据
+             <property name="" ref="另一个bean的名字"></property>
+             等效
+            <property name="">
+                <ref bean=""></ref>
+            </property>
+
+    -->
+        <bean id="personId" class="Lee.Bean.XML.setter.Person">
+            <property name="name" value="李大叔啊"></property>
+            <property name="age">
+                <value>1234</value>
+            </property>
+            <property name="homeaddr" ref="AddressId"></property>
+            <property name="comaddr">
+                <ref bean="comAddressId"></ref>
+            </property>
+        </bean>
+        <bean id="AddressId" class="Lee.Bean.XML.setter.Address">
+            <property name="addr" value="四川"></property>
+            <property name="tel" value="911"></property>
+        </bean>
+         <bean id="comAddressId" class="Lee.Bean.XML.setter.Address">
+              <property name="addr" value="广州"></property>
+              <property name="tel" value="119"></property>
+    </bean>
+ ```
+ ### p命名空间[了解]
+ - 对"setter方法注入"进行简化，替换<property name="属性名">,而是在<bean p:属性名="普通值" p:属性名-ref="引用值">
+ - p命名空间使用前提，必须添加命名空间
