@@ -1,4 +1,4 @@
-## IoC
+## 编写流程
 1. 导入jar包(4+1)
 - 4个核心(beans,core,context,expression)+1个依赖(commons-logging....jar) 
 - **RELEASE** 字节码，所需要的jar包  
