@@ -63,4 +63,5 @@
 >加载xml运行时的位置-->/WEB-INF/...xml 通过javaweb ServletContextgetRealPath()获得具体盘符
 
 # 装配Bean
-[XML方式](/Bean/XML.md)
+[装配Bean基于XML](/Bean/XML.md)
+[装配Bean基于注解](/Bean/Annotation.md)
