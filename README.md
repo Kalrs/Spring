@@ -87,9 +87,9 @@
 - Aspect(切面)：是切入点pointcut和通知advice的结合
 > 一个切入点和一个通知组成一个特殊的面
 ### Spring代理模式
-[JDK动态代理]()
-[cglib字节码增强]
-[工厂bean代理-半自动]
-[全自动]
+[JDK动态代理](/AOP/1.JDK动态代理.md)
+[cglib字节码增强](/AOP/2.cglib字节码增强.md)
+[工厂bean代理-半自动](/AOP/4.半自动代理.md)
+[全自动](/AOP/5.全自动代理.md)
 
 
