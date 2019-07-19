@@ -86,10 +86,36 @@
 - proxy(代理类)
 - Aspect(切面)：是切入点pointcut和通知advice的结合
 > 一个切入点和一个通知组成一个特殊的面
+### AOP联盟为通知Advice定义了org.aopalliance.aop.Advice
+- Spring按照通知Advice在目标类方法的连接点位置，可以分为5类
+   - 前置通知 org.springframework.aop.MethodBeforeAdvice
+在目标方法执行前实施增强
+   - 后置通知 org.springframework.aop.AfterReturningAdvice
+在目标方法执行后实施增强
+   - **环绕通知** org.aopalliance.intercept.MethodInterceptor
+在目标方法执行前后实施增强
+   - 异常抛出通知 org.springframework.aop.ThrowsAdvice
+在方法抛出异常后实施增强
+   - 引介通知 org.springframework.aop.IntroductionInterceptor
+在目标类中添加一些新的方法和属性
+
+### 环绕通知
+- 必须手动执行目标方法.
+>
+```java
+try{
+  //前置通知
+  //执行目标方法
+  //后置通知
+}catch(){
+  //抛出异常通知
+}
+```
+
 ### Spring代理模式
-[JDK动态代理](/AOP/1.JDK动态代理.md)
-[cglib字节码增强](/AOP/2.cglib字节码增强.md)
-[工厂bean代理-半自动](/AOP/4.半自动代理.md)
-[全自动](/AOP/5.全自动代理.md)
+[JDK动态代理](/AOP/1.JDK动态代理.md)  
+[cglib字节码增强](/AOP/2.cglib字节码增强.md)  
+[工厂bean代理-半自动](/AOP/4.半自动代理.md)  
+[全自动](/AOP/5.全自动代理.md)  
 
 
